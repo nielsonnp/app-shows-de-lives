@@ -1,21 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="pt-br" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <title>Ionic App</title>
-  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="msapplication-tap-highlight" content="no">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171084752-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
+  gtag('config', 'UA-171084752-1');
+</script>
+
+  <meta charset="UTF-8">
+  <title>Shows de Lives</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="google-site-verification" content="75f8AZQWCz8S7q4NokSZZteL1-mUX4OKnxftP_NT0ZM" />
+
+  <!-- slides no topo da página de lives -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+  <link rel="icon" type="image/x-icon" href="assets/img/play.png">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#4e8ef7">
-
-  <!-- add to homescreen for ios -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-  <!-- cordova.js required for cordova apps (remove if not needed) -->
+  
+  <!-- cordova.js required for cordova apps -->
   <script src="cordova.js"></script>
 
   <!-- un-comment this code to enable service worker
@@ -23,7 +35,7 @@
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js')
         .then(() => console.log('service worker installed'))
-        .catch(err => console.error('Error', err));
+        .catch(err => console.log('Error', err));
     }
   </script>-->
 
@@ -31,6 +43,7 @@
 
 </head>
 <body>
+
 
   <!-- Ionic's root component and where the app will load -->
   <ion-app></ion-app>
@@ -42,8 +55,30 @@
        It contains all of the dependencies in node_modules -->
   <script src="build/vendor.js"></script>
 
-  <!-- The main bundle js is generated during the build process -->
+  <!-- The bundle js is generated during the build process -->
   <script src="build/main.js"></script>
 
+  <!-- Efeito dos slides no topo da página -->
+  <script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 5000); // Change image every 5 seconds
+    }
+    </script>
+
+
 </body>
+
+
+
 </html>

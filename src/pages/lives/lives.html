@@ -1,0 +1,92 @@
+<ion-header id="cabecalho">
+  <ion-navbar>
+    <ion-title>
+      <ion-icon name='logo-youtube'></ion-icon>
+      Shows de Lives
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding id="page2">
+
+
+  <div id="destaque-hoje" style="margin-left: -8px; margin-top: -20px; margin-right: -18px;">
+    <img src="https://i.ytimg.com/vi/DIEyRrz_Yt8/maxresdefault.jpg" alt="">
+  </div>
+
+
+  <h1 class="titulo-dias">Hoje - 03/07/2020</h1>
+
+  <ion-scroll scrollX style="height:300px;">
+    <ion-card class="scroll-item" *ngFor="let live of sexta">
+      <div id="efeito-aovivo">
+        <img style="height: 184px;" src="{{live.img}}" />
+      </div>
+      <ion-card-content>
+        <div>
+          <h2>
+            <ion-icon name='musical-notes'></ion-icon>
+            {{ live.nome }}
+          </h2>
+          <!--
+          <h4>
+            {{live.nome2}}
+          </h4>
+          -->
+          <h3>
+            <ion-icon name='time'></ion-icon>
+            {{ live.data }}
+          </h3>
+        </div>
+        <div id="aovivo">
+          <a href="https://api.whatsapp.com/send?text=https://showsdelives.web.app" id="whatsapp-share-btt" target="_blank" ></a>
+        </div>
+      </ion-card-content>
+      <ion-row no-padding>
+        <ion-col>
+          <a href="{{live.show}}" target="_blank">
+            <button id="acessar" ion-button clear small color="danger" icon-start>
+              <ion-icon name='logo-youtube'></ion-icon>
+              Acessar
+            </button>
+          </a>
+        </ion-col>
+      </ion-row>
+
+    </ion-card>
+  </ion-scroll>
+
+  <br>
+  <br>
+
+  <div id="content-home" style="width: 100%; height: auto; text-align: center; color: #04B486;">
+    
+    <div id="parceiros">
+      <a href="https://www.novapalmeiraoficial.com.br/" target="_blank">
+        <img id="blog" src="assets/img/blog.jpeg">
+      </a>
+      A informação com agilidade e responsabilidade
+    </div>
+    <p>Desenvolvido por: Ranyelson Dantas</p>
+  </div>
+
+  <!--
+  <ion-fab bottom left>
+    <button ion-fab style="background-color:yellow; color: black;">Logo</button>
+    <ion-fab-list side="top">
+      <button id="fab01" ion-button>Entrega em<br>Campina Grande/PB<br>
+        <font style="padding-left: 8px;" color="red">Faça seu pedido!</font>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
+  -->
+  
+
+
+
+ 
+
+  <script src="/__/firebase/7.14.1/firebase-app.js"></script>
+  <script src="/__/firebase/init.js"></script>
+</ion-content>

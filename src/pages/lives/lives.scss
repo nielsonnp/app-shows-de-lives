@@ -1,0 +1,182 @@
+//Cor do topo
+.toolbar-background {
+    background-color:#04B486;
+}
+
+//Estilo do topo
+.toolbar-title-md {
+    padding: 0 12px;
+    font-size: 22px;
+    color: black;
+    text-shadow: 2px 2px 3px white, 2px 2px 27px white, 2px 2px 7px white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#page2{
+    background-color: black;
+    
+}
+
+
+
+//Estilo dos icones tab
+.tabs-md .tab-button {
+    min-height: 5.6rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    padding: 0;
+    background-color: #04B486;
+}
+
+//Estilo dos icones tab
+.tabs-md .tab-button[aria-selected=true] {
+    padding: 0;
+    color: black;
+}
+
+//mudar cores dos icone Home
+.ion-md-home:before {
+    content: "\f30c";
+    color: black;
+}
+
+//mudar cores dos icone Videocam
+.ion-md-videocam:before {
+    content: "\f39f";
+    color: black;
+}
+
+//mudar cores dos icone Sobre
+.ion-md-information-circle:before {
+    content: "\f311";
+    color: black;
+}
+
+
+//Div dos conteudos
+
+#img-logo{
+    position: absolute;
+    width: 100%;
+    height: 40%;
+   
+}
+
+#img-home1{
+    
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    right: 0px;
+    left: 0px;
+    top: 40%;
+    
+}
+
+//Titulo do lado do botão acessar
+#titulo-img{
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 30%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    display: inline-flex;
+    
+}
+
+//Botão Acessar 
+.btn-home{
+    background-color: red;
+    color: white;
+    position: absolute;
+    right: 10%;
+    padding: 6px;
+    border-radius: 2px;
+    display: inline-block;
+    margin-top: 2%;
+}
+
+
+
+//Div link compartilhar
+.card-content-md {
+    padding: 13px 16px;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    display: flex;
+}
+
+//Div link compartilhar
+#aovivo{
+    position: absolute;
+    padding-left: 73%;
+}
+
+//Icon Compartilhar
+#whatsapp-share-btt {
+    display: inline-block;            
+    width: 30px;
+    height: 30px;
+    background-size: 100% 100%; /* ou 'contain' */
+    background-image: url("../../assets/icon/share.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+//Espaçamento do scroll na tela
+ion-app.md [padding] .scroll-content {
+    padding: 16px 14px 16px 14px;
+}
+
+
+//ion-fab 01
+#fab01{
+    background-color: #FFFF00;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: black;
+    border-radius: 5px;
+}
+
+//cor do link
+#fab01 a{
+    text-decoration: none;
+    color: red;
+}
+
+//ion-fab 02
+#fab02{
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+//Cor do link
+#fab02 a{
+    text-decoration: none;
+    color: #04B486;
+}
+
+//ion-fab
+.button-md{
+text-transform: none;
+}
+
+//rodape ranyelson dantas
+#rodape{
+    width: 100%; 
+    height: auto; 
+    text-align: center; 
+    color: #04B486;
+}
+
